@@ -25,8 +25,8 @@ namespace Schoolmanagement.BusinessLayer.Services.Repository
         /// <returns></returns>
         public async Task<IEnumerable<Library>> AllBook()
         {
-            var book = await _schoolDbContext.Libraries.OrderByDescending(x => x.BookName).ToListAsync();
-            return book;
+            //Write Your Code Here
+            throw new NotImplementedException();
         }
         /// <summary>
         /// Get all notice from databse and show on main page
@@ -34,8 +34,8 @@ namespace Schoolmanagement.BusinessLayer.Services.Repository
         /// <returns></returns>
         public async Task<IEnumerable<Notice>> AllNotice()
         {
-            var notice = await _schoolDbContext.Notices.OrderByDescending(x => x.NoticeDate).ToListAsync();
-            return notice;
+            //Write Your Code Here
+            throw new NotImplementedException();
         }
         /// <summary>
         /// get all student from database
@@ -43,8 +43,8 @@ namespace Schoolmanagement.BusinessLayer.Services.Repository
         /// <returns></returns>
         public async Task<IEnumerable<Student>> AllStudent()
         {
-            var student = await _schoolDbContext.Students.OrderByDescending(x => x.Name).ToListAsync();
-            return student;
+            //Write Your Code Here
+            throw new NotImplementedException();
         }
         /// <summary>
         /// Get all teacher from databse
@@ -52,8 +52,8 @@ namespace Schoolmanagement.BusinessLayer.Services.Repository
         /// <returns></returns>
         public async Task<IEnumerable<Teacher>> AllTeacher()
         {
-            var teacher = await _schoolDbContext.Teachers.OrderByDescending(x => x.Name).ToListAsync();
-            return teacher;
+            //Write Your Code Here
+            throw new NotImplementedException();
         }
         /// <summary>
         /// Get all book list from databse
@@ -61,8 +61,8 @@ namespace Schoolmanagement.BusinessLayer.Services.Repository
         /// <returns></returns>
         public async Task<IEnumerable<Library>> BookList()
         {
-            var book = await _schoolDbContext.Libraries.OrderByDescending(x => x.BookId).ToListAsync();
-            return book;
+            //Write Your Code Here
+            throw new NotImplementedException();
         }
         /// <summary>
         /// Borrow a book
@@ -72,12 +72,8 @@ namespace Schoolmanagement.BusinessLayer.Services.Repository
         /// <returns></returns>
         public async Task<BookBorrow> BorrowBook(int BookId, BookBorrow bookBorrow)
         {
-            if (bookBorrow.BookId == BookId)
-            {
-                _schoolDbContext.BookBorrows.Add(bookBorrow);
-                await _schoolDbContext.SaveChangesAsync();
-            }
-            return bookBorrow;
+            //Write Your Code Here
+            throw new NotImplementedException();
         }
         /// <summary>
         /// Get borrow book info and use while returining book
@@ -86,10 +82,8 @@ namespace Schoolmanagement.BusinessLayer.Services.Repository
         /// <returns></returns>
         public async Task<BookBorrow> BorrowInfo(int BorrowId)
         {
-            var result = await _schoolDbContext.BookBorrows
-                                 .Where(x => x.BorrowId == BorrowId)
-                                 .FirstOrDefaultAsync();
-            return result;
+            //Write Your Code Here
+            throw new NotImplementedException();
         }
         /// <summary>
         /// Find an existing notice by name
@@ -98,9 +92,8 @@ namespace Schoolmanagement.BusinessLayer.Services.Repository
         /// <returns></returns>
         public async Task<IEnumerable<Notice>> FindNotice(string name)
         {
-            var result = await _schoolDbContext.Notices.
-                Where(x => x.Name == name || x.Event == name).Take(10).ToListAsync();
-            return result;
+            //Write Your Code Here
+            throw new NotImplementedException();
         }
         /// <summary>
         /// Faind an existing student by name
@@ -109,9 +102,8 @@ namespace Schoolmanagement.BusinessLayer.Services.Repository
         /// <returns></returns>
         public async Task<IEnumerable<Student>> FindStudent(string name)
         {
-            var result = await _schoolDbContext.Students.
-                Where(x => x.Name == name).Take(10).ToListAsync();
-            return result;
+            //Write Your Code Here
+            throw new NotImplementedException();
         }
     }
 }

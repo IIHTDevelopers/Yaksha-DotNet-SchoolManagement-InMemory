@@ -1,6 +1,7 @@
 ﻿using Schoolmanagement.BusinessLayer.Interfaces;
 using Schoolmanagement.BusinessLayer.Services.Repository;
 using Schoolmanagement.Entities;
+using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 
@@ -22,8 +23,8 @@ namespace Schoolmanagement.BusinessLayer.Services
         /// <returns></returns>
         public async Task<IEnumerable<Library>> AllBook()
         {
-            var book = await _sRepository.AllBook();
-            return book;
+            //Write Your Code Here
+            throw new NotImplementedException();
         }
         /// <summary>
         /// Get all notice from databse and show on main page
@@ -31,8 +32,8 @@ namespace Schoolmanagement.BusinessLayer.Services
         /// <returns></returns>
         public async Task<IEnumerable<Notice>> AllNotice()
         {
-            var result = await _sRepository.AllNotice();
-            return result;
+            //Write Your Code Here
+            throw new NotImplementedException();
         }
         /// <summary>
         /// get all student from database
@@ -40,8 +41,8 @@ namespace Schoolmanagement.BusinessLayer.Services
         /// <returns></returns>
         public Task<IEnumerable<Student>> AllStudent()
         {
-            var result = _sRepository.AllStudent();
-            return result;
+            //Write Your Code Here
+            throw new NotImplementedException();
         }
         /// <summary>
         /// Get all teacher from databse
@@ -49,8 +50,8 @@ namespace Schoolmanagement.BusinessLayer.Services
         /// <returns></returns>
         public Task<IEnumerable<Teacher>> AllTeacher()
         {
-            var result = _sRepository.AllTeacher();
-            return result;
+            //Write Your Code Here
+            throw new NotImplementedException();
         }
         /// <summary>
         /// Get all book list from databse
@@ -58,8 +59,8 @@ namespace Schoolmanagement.BusinessLayer.Services
         /// <returns></returns>
         public Task<IEnumerable<Library>> BookList()
         {
-            var result = _sRepository.BookList();
-            return result;
+            //Write Your Code Here
+            throw new NotImplementedException();
         }
         /// <summary>
         /// Borrow a book
@@ -69,8 +70,8 @@ namespace Schoolmanagement.BusinessLayer.Services
         /// <returns></returns>
         public Task<BookBorrow> BorrowBook(int BookId, BookBorrow bookBorrow)
         {
-            var result = _sRepository.BorrowBook(BookId, bookBorrow);
-            return result;
+            //Write Your Code Here
+            throw new NotImplementedException();
         }
         /// <summary>
         /// Get borrow book info and use while returining book
@@ -79,8 +80,8 @@ namespace Schoolmanagement.BusinessLayer.Services
         /// <returns></returns>
         public async Task<BookBorrow> BorrowInfo(int BorrowId)
         {
-            var bookinfo = await _sRepository.BorrowInfo(BorrowId);
-            return bookinfo;
+            //Write Your Code Here
+            throw new NotImplementedException();
         }
         /// <summary>
         /// Find a book from Db by its name
@@ -89,8 +90,8 @@ namespace Schoolmanagement.BusinessLayer.Services
         /// <returns></returns>
         public async Task<IEnumerable<Notice>> FindNotice(string name)
         {
-            var findresult = await _sRepository.FindNotice(name);
-            return findresult;
+            //Write Your Code Here
+            throw new NotImplementedException();
         }
         /// <summary>
         /// Find an existing student from db
@@ -99,8 +100,8 @@ namespace Schoolmanagement.BusinessLayer.Services
         /// <returns></returns>
         public async Task<IEnumerable<Student>> FindStudent(string name)
         {
-            var findstudent = await _sRepository.FindStudent(name);
-            return findstudent;
+            //Write Your Code Here
+            throw new NotImplementedException();
         }
     }
 }

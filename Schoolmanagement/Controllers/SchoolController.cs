@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Schoolmanagement.BusinessLayer.Interfaces;
@@ -26,26 +27,8 @@ namespace Schoolmanagement.Controllers
         [HttpGet]
         public async Task<IActionResult> AllNotice(string search, int page = 1)
         {
-            if (search != null)
-            {
-                var intView = new NoticeViewModel
-                {
-                    NoticePerPage = 5,
-                    Notices = await _schoolServices.FindNotice(search),
-                    CurrentPage = page
-                };
-                return View(intView);
-            }
-            else
-            {
-                var intView = new NoticeViewModel
-                {
-                    NoticePerPage = 5,
-                    Notices = await _schoolServices.AllNotice(),
-                    CurrentPage = page
-                };
-                return View(intView);
-            }
+            //Write Your Code Here
+            throw new NotImplementedException();
         }
         /// <summary>
         /// Get all School student and using this method find student by name
@@ -56,26 +39,8 @@ namespace Schoolmanagement.Controllers
         [HttpGet]
         public async Task<IActionResult> AllStudent(string search, int page = 1)
         {
-            if (search != null)
-            {
-                var intView = new StudentViewModel
-                {
-                    StudentPerPage = 5,
-                    Students = await _schoolServices.FindStudent(search),
-                    CurrentPage = page
-                };
-                return View(intView);
-            }
-            else
-            {
-                var intView = new StudentViewModel
-                {
-                    StudentPerPage = 5,
-                    Students = await _schoolServices.AllStudent(),
-                    CurrentPage = page
-                };
-                return View(intView);
-            }
+            //Write Your Code Here
+            throw new NotImplementedException();
         }
         /// <summary>
         /// Get all teachers
@@ -84,8 +49,8 @@ namespace Schoolmanagement.Controllers
         [HttpGet]
         public async Task<IActionResult> AllTeacher()
         {
-            IEnumerable<Teacher> teacher = await _schoolServices.AllTeacher();
-            return View(teacher);
+            //Write Your Code Here
+            throw new NotImplementedException();
         }
         /// <summary>
         /// Get all book from library
@@ -94,8 +59,8 @@ namespace Schoolmanagement.Controllers
         [HttpGet]
         public async Task<IActionResult> Library()
         {
-            IEnumerable<Library> library = await _schoolServices.AllBook();
-            return View(library);
+            //Write Your Code Here
+            throw new NotImplementedException();
         }
         /// <summary>
         /// Borrow/take book from library
@@ -116,12 +81,8 @@ namespace Schoolmanagement.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Borrowbook(int BookId, BookBorrow borrow)
         {
-            if (ModelState.IsValid)
-            {
-                var borrowresult = await _schoolServices.BorrowBook(BookId, borrow);
-                return RedirectToAction("Thanks","School", new { BorrowId = borrowresult.BorrowId });
-            }
-            return View();
+            //Write Your Code Here
+            throw new NotImplementedException();
         }
         /// <summary>
         /// Get the borrow book info and Id to use while returning
@@ -131,8 +92,8 @@ namespace Schoolmanagement.Controllers
         [HttpGet]
         public async Task<IActionResult> Thanks(int BorrowId)
         {
-            var bookinfo = await _schoolServices.BorrowInfo(BorrowId);
-            return View(bookinfo);
+            //Write Your Code Here
+            throw new NotImplementedException();
         }
     }
 }
