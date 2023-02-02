@@ -40,8 +40,8 @@ namespace Schoolmanagement
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_3_0);
             //services.AddPaging();
             //To Use InMemory Db
-            //services.AddDbContext<SchoolDbContext>(options => options.UseInMemoryDatabase("Schoolmanagement"));
-            services.AddDbContext<SchoolDbContext>(options => options.UseSqlServer(Configuration.GetConnectionString("Schoolmanagement")));
+            services.AddDbContext<SchoolDbContext>(options => options.UseInMemoryDatabase("SchoolConApp"));
+            //services.AddDbContext<SchoolDbContext>(options => options.UseSqlServer(Configuration.GetConnectionString("Schoolmanagement")));
             //Injecting Services and Repository
             services.AddScoped<ISchoolRepository, SchoolRepository>();
             services.AddScoped<ISchoolServices, SchoolServices>();
